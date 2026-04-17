@@ -1,0 +1,87 @@
+/* -------------------------------------------------
+   Simple Purple Flat Theme (Rounded Window Only)
+-------------------------------------------------- */
+
+* {
+    bg:          #2e2640;   /* Main purple background */
+    bg-dark:     #241d33;   /* Darker shade for items */
+    fg:          #e8e3c9;   /* Soft foreground */
+    accent:      #8fa7c4;   /* Soft blue accent */
+}
+
+/* -------------------------------------------------
+   Window
+-------------------------------------------------- */
+window {
+    background-color: @bg;
+    width: 45%;
+    border: 2px;
+    border-color: @accent;
+    border-radius: 12px;     /* Rounded container */
+    padding: 20px;
+}
+
+/* -------------------------------------------------
+   Layout
+-------------------------------------------------- */
+mainbox {
+    children: [inputbar, listview];
+}
+
+/* -------------------------------------------------
+   Input bar
+-------------------------------------------------- */
+inputbar {
+    padding: 6px 0;
+    background-color: @bg;   /* Flat */
+}
+
+prompt {
+    text-color: @accent;
+    padding: 4px 6px;
+}
+
+entry {
+    text-color: @fg;
+    padding: 4px 6px;
+}
+
+/* -------------------------------------------------
+   List view
+-------------------------------------------------- */
+listview {
+    padding: 8px 0;
+    spacing: 6px;
+    fixed-height: true;
+}
+
+/* -------------------------------------------------
+   Elements
+-------------------------------------------------- */
+element {
+    background-color: @bg-dark;   /* Darker shade */
+    text-color: @fg;
+    padding: 6px 12px;
+    border-radius: 0;             /* NO rounding inside */
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+element urgent {
+    background-color: #c284a4;
+    text-color: @bg;
+}
+
+element-icon {
+    size: 16px;
+    padding: 0 6px 0 0;
+    background-color: inherit;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+}
